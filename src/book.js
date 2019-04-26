@@ -3,6 +3,7 @@ export default class Book {
         this.title = title
     }
     getTitle() {
+        debugger
         return this.title
     }
 }
