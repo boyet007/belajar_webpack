@@ -10,12 +10,24 @@ module.exports = {
         main: './src/index.js',
         book: './src/book.js'
     },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                use: 'babel-loader'
+            }
+        ]
+    },
     output: { 
         //filename: 'myscript-[hash].js',
         
         //content hash
         filename: '[name]-[contenthash].js',
         path: path.resolve(__dirname, 'build') 
+    },
+    externals: {
+        //import jquery nanti diganti
+        'jquery': '$'
     },
     devtool: 'eval-source-map',
     plugins: [

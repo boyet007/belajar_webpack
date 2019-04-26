@@ -1,8 +1,8 @@
-export default class Book {
+export default class Newspaper {
     constructor(title) {
         this.title = title
     }
-    getTitle() {
+    getName() {
         // debugger
         return this.title
     }

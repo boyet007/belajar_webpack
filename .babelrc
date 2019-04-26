@@ -1,0 +1,17 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env", {
+                "targets": {
+                    "browsers": [
+                        ">1% in ID",
+                        "last 2 versions"
+                    ]
+                },
+                "debug": true,
+                "useBuiltIns": "usage",
+            }
+        ]
+    ],
+    "plugins": ["@babel/plugin-syntax-dynamic-import"]
+}
