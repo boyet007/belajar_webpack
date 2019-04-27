@@ -1,0 +1,11 @@
+$highlight: lime;
+
+body{
+    padding:10px;
+    background: grey;
+
+    h1{
+        border-bottom: 1px solid black;
+        box-shadow: 10px 5px 5px $highlight ;
+    }
+}

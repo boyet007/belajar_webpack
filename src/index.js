@@ -1,17 +1,9 @@
 //import Book from './book'
 //import $ from 'jquery'
-//import 'core-js/modules/es6.promimse'
-// import 'core-js/modules/es6.array.iterator'
-// import './index.css'
 
-// import 'core-js/features/array/from' 
-// import 'core-js/features/array/flat' 
-// import 'core-js/features/set'        
-// import 'core-js/features/promise' 
-
+import './index.scss'
 import "core-js/modules/es6.promise";
 import "core-js/modules/es6.array.iterator";
-
 
 $('h1').css('color', 'brown')
 
