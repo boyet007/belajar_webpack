@@ -15,6 +15,10 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: 'babel-loader'
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
@@ -30,11 +34,15 @@ module.exports = {
         'jquery': '$'
     },
     devtool: 'eval-source-map',
+    devServer: {
+        host: '0.0.0.0'
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.template.html',
             //relative terhadap outputh path
-            filename: 'index.html'
+            filename: 'index.html',
+            chunkFilename: '[name]-[contenthash:2].js'
         }),
         new CleanWebpackPlugin()
     ]
