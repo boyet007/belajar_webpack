@@ -8,4 +8,9 @@ body{
         border-bottom: 1px solid black;
         box-shadow: 10px 5px 5px $highlight ;
     }
+
+    img {
+        width: 30%;
+        display: inline-block;
+    }
 }

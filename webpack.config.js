@@ -36,13 +36,23 @@ module.exports = {
                 use: [MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader']
              
             },
-            
+            {
+                test: /\.(jpg|png|svg)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        //relative terhadap webpack outputh path
+                        outputPath: 'images',
+                        name: '[name]-[hash:3].[ext]'
+                    }
+                }
+            }
         ]
     },
     output: { 
         //filename: 'myscript-[hash].js',
         //content hash
-        filename: '[name]-[contenthash].js',
+        filename: '[name]-[contenthash:3].js',
         path: path.resolve(__dirname, 'build') 
     },
     externals: {
